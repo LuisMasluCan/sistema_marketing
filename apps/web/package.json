@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "predev": "npm run build --workspace @rgr/shared",
+    "prebuild": "npm --prefix ../../packages/shared run build",
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0"
