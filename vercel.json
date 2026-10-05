@@ -8,7 +8,7 @@
       "installCommand": "npm ci --prefix ../..",
       "buildCommand": "npm run build",
       "functions": {
-        "src/index.ts": {
+        "**/*": {
           "includeFiles": "package.json"
         }
       }
