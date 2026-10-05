@@ -1,0 +1,42 @@
+{
+  "name": "@rgr/api",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "prisma generate && tsc -b",
+    "start": "node dist/index.js",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:seed": "prisma db seed"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "latest",
+    "@fastify/cors": "latest",
+    "@fastify/jwt": "latest",
+    "@fastify/rate-limit": "latest",
+    "@fastify/static": "latest",
+    "@prisma/adapter-pg": "^7.10.0",
+    "@prisma/client": "^7.10.0",
+    "@aws-sdk/s3-request-presigner": "latest",
+    "@fastify/cookie": "latest",
+    "@rgr/shared": "*",
+    "bullmq": "latest",
+    "dotenv": "latest",
+    "fastify": "latest",
+    "ioredis": "latest",
+    "pg": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/pg": "latest",
+    "prisma": "^7.10.0",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}

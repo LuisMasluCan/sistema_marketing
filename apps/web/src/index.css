@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  color: #293548;
+  background: #f7f9fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.45;
+  --ink: #293548;
+  --muted: #718096;
+  --line: #e5eaf1;
+  --surface: #ffffff;
+  --canvas: #f7f9fc;
+  --green: #355b91;
+  --orange: #df7058;
+  --display-font: "DM Sans", "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+
+@theme {
+  --color-primary: #355b91;
+  --color-primary-foreground: #ffffff;
+  --color-foreground: #293548;
+  --color-background: #ffffff;
+  --radius: 0.3rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  min-width: 360px;
+  min-height: 100vh;
+  margin: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button {
+  color: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #7da0d2;
+  outline-offset: 2px;
+}
+#root {
+  min-height: 100vh;
+}
+::selection {
+  color: #1e3557;
+  background: #dce8f8;
+}

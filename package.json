@@ -1,0 +1,39 @@
+{
+  "name": "rgr-marketing-ops",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "overrides": {
+    "prisma": {
+      "@prisma/config": {
+        "deepmerge-ts": "^8.0.2"
+      },
+      "mysql2": "^3.24.5"
+    }
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:api": "npm run dev --workspace @rgr/api",
+    "build": "npm run build --workspace @rgr/shared && npm run build --workspace @rgr/api && npm run build --workspace @rgr/web",
+    "lint": "oxlint .",
+    "preview": "npm run preview --workspace @rgr/web"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "oxlint": "^1.81.0",
+    "prettier": "latest",
+    "typescript": "~6.0.2"
+  },
+  "dependencies": {
+    "@neon/config": "^1.8.3",
+    "@neon/env": "^1.5.0",
+    "fastify": "latest"
+  }
+}
