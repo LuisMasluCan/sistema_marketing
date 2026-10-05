@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "node scripts/dev.mjs",
     "dev:api": "npm run dev --workspace @rgr/api",
-    "build": "npm run build --workspace @rgr/shared && npm run build --workspace @rgr/api && npm run build --workspace @rgr/web",
+    "build": "npm run build --workspace @rgr/api && npm run build --workspace @rgr/web",
     "lint": "oxlint .",
     "preview": "npm run preview --workspace @rgr/web"
   },
