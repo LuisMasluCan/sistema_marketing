@@ -276,20 +276,13 @@ function AppShell() {
               <span className="topbar-date">
                 <CalendarDays size={14} /> {todayLabel}
               </span>
-              <button
-                className="profile-button"
-                type="button"
-                aria-label="Cerrar sesión"
-                title="Cerrar sesión"
-                onClick={() => window.dispatchEvent(new Event("rgr-logout"))}
-              >
+              <div className="profile-button">
                 <Avatar initials={profileName.slice(0, 2).toUpperCase()} tone="arturo" />
                 <span>
                   <b>{profileName}</b>
                   {sessionUser && <small>{sessionUser.role}</small>}
                 </span>
-                <X size={14} />
-              </button>
+              </div>
             </div>
           </header>
           <div className="mobile-brand">

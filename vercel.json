@@ -1,18 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
-    "api": {
-      "root": "apps/api",
-      "framework": "fastify",
-      "entrypoint": "src/index.ts",
-      "installCommand": "cd ../.. && npm ci",
-      "buildCommand": "npm run build",
-      "functions": {
-        "**/*": {
-          "includeFiles": "package.json"
-        }
-      }
-    },
     "web": {
       "root": "apps/web",
       "framework": "vite",
@@ -21,12 +9,6 @@
     }
   },
   "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": {
-        "service": "api"
-      }
-    },
     {
       "source": "/(.*)",
       "destination": {
